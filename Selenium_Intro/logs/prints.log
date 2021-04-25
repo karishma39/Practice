@@ -1,0 +1,8 @@
+02:37:32.993 [main] DEBUG log4jExample - Setting chrome driver property
+02:37:38.865 [main] INFO  log4jExample - Window Maximized
+02:37:38.865 [main] DEBUG log4jExample - Now hitting Amazon server
+02:37:42.293 [main] INFO  log4jExample - Landed on amazon home page
+02:37:47.585 [main] DEBUG log4jExample - Getting the frames count
+02:37:47.605 [main] INFO  log4jExample - Frames count retreived
+02:37:47.619 [main] INFO  log4jExample - Successfully switched to frame
+02:37:47.619 [main] DEBUG log4jExample - Identifying Draggable objects
