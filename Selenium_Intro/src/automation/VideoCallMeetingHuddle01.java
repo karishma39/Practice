@@ -26,10 +26,9 @@ public class VideoCallMeetingHuddle01 {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://beta.huddle01.com/");
+		
+		//Login Guest1 or host
 		driver.findElement(By.xpath("//img[@alt='start-meeting']")).click();
-//		WebElement name=driver.findElement(By.xpath("//input[@placeholder='Please Enter Your Name']"));
-//		name.clear();
-//		name.sendKeys("Guest1");
 		driver.findElement(By.xpath("//input[@placeholder='Please Enter Your E-mail']")).sendKeys("karishmaoberoi94@gmail.com");
 		WebDriverWait wait = (WebDriverWait) new WebDriverWait(driver, 20).ignoring(StaleElementReferenceException.class);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Enter Meeting']")));
@@ -48,7 +47,7 @@ public class VideoCallMeetingHuddle01 {
 		//switch to second window
 		driver.switchTo().window(secondWin);
 		
-		
+		//Login2nd guest
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Please Enter Your Name']")));
 		driver.findElement(By.xpath("//input[@placeholder='Please Enter Your E-mail']")).sendKeys("karishmaoberoi97@gmail.com");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Enter Meeting']")));
