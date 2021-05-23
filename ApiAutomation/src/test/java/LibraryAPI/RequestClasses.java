@@ -18,6 +18,7 @@ import io.restassured.specification.RequestSpecification;
 public class RequestClasses {
 	
 	Books book=new Books();
+	String bookID;
 	
 	@Test(priority = 1)
 	public void getBooks()
@@ -52,6 +53,7 @@ public class RequestClasses {
 		
 		JsonPath json = response.jsonPath();
 		Assert.assertEquals(json.getString("Msg"), "successfully added");
+		bookID=json.getString("ID");
 		
 	}
 	
@@ -60,7 +62,7 @@ public class RequestClasses {
 	{
 		RequestSpecification spec=RestAssured.given();
 		spec.body("{\r\n"
-				+ "    \"ID\": \"bcdd226\"\r\n"
+				+ "    \"ID\": \""+bookID+"\"\r\n"
 				+ "}");
 		
 		Response response = spec.post("/Library/DeleteBook.php");
