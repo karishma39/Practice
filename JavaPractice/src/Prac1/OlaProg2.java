@@ -8,30 +8,24 @@ public class OlaProg2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-//		string a=karishma
-//				string b=rishmaka
-//				output : true
-//				String a=suma
-//				string b=musa
-//				output : false
-//				abc
-//				o/p: bca
-//				abc
-//				o/p: bac
+		//Check if the strings are rotated
+				
 		
-//		String a = "Karishma";
-//		
-//		String b = "rishmaKa";
-//		
-//		//System.out.println();
-//		int n=a.indexOf(b.charAt(0));
-//		System.out.println(n);
-//		
-//		for(i=n;i<a.length();i++)
-//		{
-//			
-//		}
-//		//for(int 
+		String s1 = "Karishma";
+		
+		String s2 = "rishmaKa";
+
+		//concat s1 with s1 and check if s2 is a substring
+		
+		
+		if(s1.length()==s2.length() && s1.concat(s1).contains(s2))
+		{
+			System.out.println("Strings are rotated");
+		}
+		else
+		{
+			System.out.println("Strings are not rotated");
+		}
 		
 		String s="24.23.23.23";
 		StringTokenizer sq=new StringTokenizer(s, ".");
