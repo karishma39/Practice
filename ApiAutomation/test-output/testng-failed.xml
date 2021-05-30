@@ -5,7 +5,7 @@
     <classes>
       <class name="LibraryAPI.RequestClasses">
         <methods>
-          <include name="addBooks"/>
+          <include name="getBooks"/>
         </methods>
       </class> <!-- LibraryAPI.RequestClasses -->
     </classes>

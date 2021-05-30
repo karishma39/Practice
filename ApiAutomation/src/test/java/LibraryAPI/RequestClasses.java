@@ -6,11 +6,13 @@ import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 
 import API.automation.ApiAutomation.Books;
+import API.automation.ApiAutomation.DelBookResponse;
 
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
+import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -37,7 +39,7 @@ public class RequestClasses {
 	@Test(priority = 2)
 	public void addBooks()
 	{
-		
+		//Serialization
 		book.setAisle("226");
 		book.setAuthor("John foe");
 		book.setName("Learn Appium Automation with Java");
@@ -61,11 +63,16 @@ public class RequestClasses {
 	public void delBook()
 	{
 		RequestSpecification spec=RestAssured.given();
+		spec.expect().defaultParser(Parser.JSON);
 		spec.body("{\r\n"
 				+ "    \"ID\": \""+bookID+"\"\r\n"
 				+ "}");
 		
 		Response response = spec.post("/Library/DeleteBook.php");
+		
+		//Deserialization
+		DelBookResponse db=response.as(DelBookResponse.class);
+		Assert.assertEquals(db.getMsg(), "book is successfully deleted");
 		
 		System.out.println(response.asPrettyString());
 		Assert.assertEquals(response.getStatusCode(), 200);
