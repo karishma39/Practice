@@ -11,14 +11,14 @@ public class MakeMyTrip {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\karishma.oberoi\\QA\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\karishma.oberoi\\Documents\\QA\\chromedriver_win\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.makemytrip.com/");
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//label[@for='departure']")).click();
 		String getMonth = driver.findElement(By.xpath("//div[@class='DayPicker-Month'][1] //div[@class='DayPicker-Caption']")).getText();
-		while(!getMonth.equals("March 2021"))
+		while(!getMonth.equals("May 2021"))
 		{
 			driver.findElement(By.xpath("//span[@aria-label='Next Month']")).click();
 			getMonth = driver.findElement(By.xpath("//div[@class='DayPicker-Month'][1] //div[@class='DayPicker-Caption']")).getText();
