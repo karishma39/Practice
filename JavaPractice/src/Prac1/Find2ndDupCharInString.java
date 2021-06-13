@@ -1,29 +1,11 @@
 package Prac1;
 
-import java.util.Random;
-
-//Emp: id, name,dept
-//select count(*) from emp group by dept;
-
-public class UST {
+public class Find2ndDupCharInString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		//createString(5);
+		//Find 2nd duplicate Char in a String
 		FindSecondDupInName("Kkkarishma Oberoi");
-	}
-	
-	public static String createString(int n)
-	{
-		String str=null;
-		
-		byte[] bytes=new byte[255];
-		Random r = new Random();
-		r.nextBytes(bytes);
-		
-		return str;
-		
 	}
 	
 	public static void FindSecondDupInName(String s)
