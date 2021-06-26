@@ -8,6 +8,11 @@ import java.util.Random;
 
 public class GenerateRandomString {
 
+	public int GenerateRandomString()
+	{
+		return 0;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
