@@ -1,4 +1,4 @@
-package API.automation.ApiAutomation;
+package pojo;
 
 public class Books {
 

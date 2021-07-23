@@ -5,9 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 
-import API.automation.ApiAutomation.Books;
-import API.automation.ApiAutomation.DelBookResponse;
-
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -16,8 +13,10 @@ import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import pojo.Books;
+import pojo.DelBookResponse;
 
-public class RequestClasses {
+public class RequestClassBooks {
 	
 	Books book=new Books();
 	String bookID;
